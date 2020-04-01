@@ -3,7 +3,7 @@ import glob
 import fnmatch
 def main():
 	
-	mainpath= "/home/muneeb/Desktop/MTECHMINORLINUX/DATA"
+	mainpath= "../../MTECHMINORLINUX/DATA"
 	##STEP 1: FIND SUBJECTS e.g., '001','002', etc & COMBINATION TYPES e.g., 'glasses' etc. AND TYPES e.g., nonsleepyCombination etc.
 	#Give the paths respectively than manually typing 001 etc glasses etc, and sleepyComb... etc
 	readingpath= mainpath+"/NTHU_Distracted_Driver_Dataset/Training_Dataset"
