@@ -6,9 +6,9 @@ import pandas as pd
 import numpy as np
 import sys
 
-def startinit():
+def complete0():
         conn = http.client.HTTPSConnection("api.msg91.com")
-        payload = "{ \"sender\": \"SOCKET\", \"route\": \"4\", \"country\": \"91\", \"sms\": [ { \"message\": \"Annotprocess starting\", \"to\": [ \"9149429559\", \"9797091372\$
+        payload = "{ \"sender\": \"SOCKET\", \"route\": \"4\", \"country\": \"91\", \"sms\": [ { \"message\": \"Annotprocess starting\", \"to\": [ \"9149429559\", \"9797091372\]}"
         headers = {'authkey': "118364AVIfu09J5e85f50eP1",'content-type': "application/json"}
         conn.request("POST", "/api/v2/sendsms", payload, headers)
         res = conn.getresponse()
@@ -18,7 +18,7 @@ def startinit():
 
 def complete():
         conn = http.client.HTTPSConnection("api.msg91.com")
-        payload = "{ \"sender\": \"SOCKET\", \"route\": \"4\", \"country\": \"91\", \"sms\": [ { \"message\": \"Annot process complete\", \"to\": [ \"9149429559\", \"9797091372\$
+        payload = "{ \"sender\": \"SOCKET\", \"route\": \"4\", \"country\": \"91\", \"sms\": [ { \"message\": \"Annot process complete\", \"to\": [ \"9149429559\", \"9797091372\]}"
         headers = {'authkey': "118364AVIfu09J5e85f50eP1",'content-type': "application/json"}
         conn.request("POST", "/api/v2/sendsms", payload, headers)
         res = conn.getresponse()
@@ -139,7 +139,7 @@ def main():
 					annotateimage(readingfrom, savingto, fileattrib)
 	return 1
 if __name__== "__main__":
-        startinit()
+        complete0()
         if main()==1 :
                 complete()
 
