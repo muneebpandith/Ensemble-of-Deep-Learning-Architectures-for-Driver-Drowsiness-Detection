@@ -69,7 +69,7 @@ def main():
 
 
 
-	subjectspath = mainpath+"/DDD/newsubjectwise"
+	subjectspath = mainpath+"/newsubjectwise"
 	annotationsmainpath=mainpath+"/NTHU_Distracted_Driver_Dataset/Training_Dataset"
 
 
