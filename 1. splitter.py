@@ -105,5 +105,6 @@ def main():
 	return 1
 				
 if __name__== "__main__":
+	complete0()
 	if(main()==1):
 		complete()
