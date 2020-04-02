@@ -5,7 +5,7 @@ import http.client
 
 def complete0():
         conn = http.client.HTTPSConnection("api.msg91.com")
-        payload = "{ \"sender\": \"SOCKET\", \"route\": \"4\", \"country\": \"91\", \"sms\": [ { \"message\": \"Splitting process starting\", \"to\": [ \"9149429559\", \"9797091372\" ] }] }"
+        payload = "{ \"sender\": \"SOCKET\", \"route\": \"4\", \"country\": \"91\", \"sms\": [ { \"message\": \"Splitting for eval process starting\", \"to\": [ \"9149429559\", \"9797091372\" ] }] }"
         headers = {'authkey': "118364AVIfu09J5e85f50eP1",'content-type': "application/json"}
         conn.request("POST", "/api/v2/sendsms", payload, headers)
         res = conn.getresponse()
@@ -14,7 +14,7 @@ def complete0():
       
 def complete():
 	conn = http.client.HTTPSConnection("api.msg91.com")
-	payload = "{ \"sender\": \"SOCKET\", \"route\": \"4\", \"country\": \"91\", \"sms\": [ { \"message\": \"Splitting process complete for all subjects\", \"to\": [ \"9149429559\", \"9797091372\" ] }] }"
+	payload = "{ \"sender\": \"SOCKET\", \"route\": \"4\", \"country\": \"91\", \"sms\": [ { \"message\": \"Splitting for eval process complete for all subjects\", \"to\": [ \"9149429559\", \"9797091372\" ] }] }"
 	headers = {'authkey': "118364AVIfu09J5e85f50eP1",'content-type': "application/json"}
 	conn.request("POST", "/api/v2/sendsms", payload, headers)
 	res = conn.getresponse()
@@ -26,15 +26,15 @@ def main():
 	mainpath= "../../MTECHMINORLINUX/DATA"
 	##STEP 1: FIND SUBJECTS e.g., '001','002', etc & COMBINATION TYPES e.g., 'glasses' etc. AND TYPES e.g., nonsleepyCombination etc.
 	#Give the paths respectively than manually typing 001 etc glasses etc, and sleepyComb... etc
-	readingpath= mainpath+"/NTHU_Distracted_Driver_Dataset/Training_Dataset"
+	readingpath= mainpath+"/NTHU_Distracted_Driver_Dataset/Evaluation_Dataset"
 	savingpath=mainpath+"/newsubjectwise"
 
 
 
 
 
-	subjectspath = mainpath+"/NTHU_Distracted_Driver_Dataset/Training_Dataset"
-	typespath= subjectspath+"/001"	
+	subjectspath = mainpath+"/NTHU_Distracted_Driver_Dataset/Evaluation_Dataset"
+	typespath= subjectspath+"/004"	
 	combspath= typespath+"/glasses"
 	ext=".avi"
 
