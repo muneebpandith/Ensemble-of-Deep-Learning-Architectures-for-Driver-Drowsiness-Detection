@@ -5,7 +5,7 @@ import http.client
 
 def complete0():
         conn = http.client.HTTPSConnection("api.msg91.com")
-        payload = "{ \"sender\": \"SOCKET\", \"route\": \"4\", \"country\": \"91\", \"sms\": [ { \"message\": \"Splitting process starting\", \"to\": [ \"9149429559\", \"9797091372\" ] }] }"
+        payload = "{ \"sender\": \"SOCKET\", \"route\": \"4\", \"country\": \"91\", \"sms\": [ { \"message\": \"Splitting process starting\", \"to\": [ \"9149429559\" ] }] }"
         headers = {'authkey': "118364AVIfu09J5e85f50eP1",'content-type': "application/json"}
         conn.request("POST", "/api/v2/sendsms", payload, headers)
         res = conn.getresponse()
@@ -14,7 +14,7 @@ def complete0():
       
 def complete():
 	conn = http.client.HTTPSConnection("api.msg91.com")
-	payload = "{ \"sender\": \"SOCKET\", \"route\": \"4\", \"country\": \"91\", \"sms\": [ { \"message\": \"Splitting process complete for all subjects\", \"to\": [ \"9149429559\", \"9797091372\" ] }] }"
+	payload = "{ \"sender\": \"SOCKET\", \"route\": \"4\", \"country\": \"91\", \"sms\": [ { \"message\": \"Splitting process complete for all subjects\", \"to\": [ \"9149429559\"] }] }"
 	headers = {'authkey': "118364AVIfu09J5e85f50eP1",'content-type': "application/json"}
 	conn.request("POST", "/api/v2/sendsms", payload, headers)
 	res = conn.getresponse()
@@ -41,9 +41,11 @@ def main():
 
 	subjects=os.listdir(subjectspath)
 	#['001', '002', '005', '006', '008', '009', '012', '013', '015', '020', '023', '024', '031', '032', '033', '034', '035', '036'] 
+
 	
 	types   =os.listdir(typespath)
 	#['glasses', 'nightglasses', 'night_noglasses', 'noglasses', 'sunglasses']
+	
 	
 
 	combs=list()
@@ -57,7 +59,9 @@ def main():
 	
 	print(subjects,combs,types)
 	#subjects=list(['005'])
-
+	
+	input("Do you want to continue")
+	
 
 	#doffmpeg()
 	#saveindir ="I:/DDD"
