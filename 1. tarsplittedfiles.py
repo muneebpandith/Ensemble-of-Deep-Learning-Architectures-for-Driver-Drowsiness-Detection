@@ -22,7 +22,7 @@ def complete():
 
 
 def main():
-  #this includes subject 005
+  #this excludes subject 005
   os.system("tar -czvf ../../MTECHMINORLINUX/DATA/newsubjectwise >> tarsplittedfiles.txt")
   return 1
 if __name__== "__main__":
