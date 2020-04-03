@@ -28,7 +28,7 @@ def upload_file(file_from, file_to,access_token):
 def main():
 	#this excludes subject 005
 	
-	access_token = 'pf60SIufNzAAAAAAAAAAQzR_9Az9uueqBoo5ueYoErVq-SQ_U1iKYnpHcoBPfTDf'
+	access_token = ''
 	file_from = '../../MTECHMONORLINUX/DATA/newsubjectwise.tar.gz'  
 	file_to = '/Nexus/newsubjectwise.tar.gz' 
 	upload_file(file_from,file_to,access_token)
