@@ -54,7 +54,7 @@ def annotateimage(readingfile, writingdirectory, fileattrib):
 		print("Exists, So ignore: "+savingas)
 	else:
 		print(savingas)
-		#cv2.imwrite(savingas,imgCroppedFace)
+		cv2.imwrite(savingas,imgCroppedFace)
 def main():
 
 	
