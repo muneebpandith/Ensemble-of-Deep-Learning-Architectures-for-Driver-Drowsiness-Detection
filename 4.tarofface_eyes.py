@@ -35,13 +35,7 @@ def main():
 	intermsg("Tar process of face COMPLETE")
 	intermsg("Tar process of eyes INIT")
 	os.system("tar -czvf 'croppedeyes.tar.gz' 'croppedeyes' >> tarofcroppedeyesfiles.txt")
-	intermsg("Tar process of eyes INIT")
-	
-	
-	os.system("tar -czvf 'croppedmouth.tar.gz' 'croppedmouth' >> tarofcroppedmouthfiles.txt")
-	os.system("tar -czvf 'croppedlefteye.tar.gz' 'croppedlefteye' >> tarofcroppedlefteye.txt")
-	os.system("tar -czvf 'croppedrighteye.tar.gz' 'croppedrighteye' >> tarofcroppedrighteye.txt")
-		
+	intermsg("Tar process of eyes COMPLETE")
   return 1
 if __name__== "__main__":
 	complete0()
